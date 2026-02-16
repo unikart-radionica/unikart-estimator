@@ -2,335 +2,359 @@
 <html lang="sr">
 <head>
   <!-- Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-RYD16ZTQ6E"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-RYD16ZTQ6E', { anonymize_ip: true });
-</script>
-<meta charset="utf-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>UnikArt – Okvirna procena cene</title>
-<style>
-:root{
-  --bg:#f6f7f9;
-  --card:#ffffff;
-  --text:#101828;
-  --muted:#667085;
-  --line:#e4e7ec;
-  --accent:#1f7a5a;
-  --accent2:#145741;
-  --warn:#b42318;
-  --shadow:0 10px 30px rgba(16,24,40,.08);
-  --radius:18px;
-}
-*{box-sizing:border-box}
-body{
-  margin:0;
-  font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
-  background:var(--bg);
-  color:var(--text);
-  line-height:1.35;
-}
-.wrap{
-  max-width:520px;
-  margin:0 auto;
-  padding:18px 14px 28px;
-}
-.brand{
-  margin:2px 0 2px;
-  font-size:14px;
-  font-weight:800;
-  letter-spacing:.2px;
-  color:var(--accent2);
-}
-.title{
-  font-size:20px;
-  font-weight:800;
-  margin:0 0 6px;
-}
-.subtitle{
-  margin:0 0 14px;
-  color:var(--muted);
-  font-size:14px;
-}
-.card{
-  background:var(--card);
-  border:1px solid var(--line);
-  border-radius:var(--radius);
-  box-shadow:var(--shadow);
-  padding:14px;
-  margin:12px 0;
-}
-.grid2{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:12px;
-}
-label{
-  display:block;
-  font-size:13px;
-  color:var(--muted);
-  margin-bottom:6px;
-}
-input,select{
-  width:100%;
-  border:1px solid var(--line);
-  border-radius:14px;
-  padding:12px;
-  font-size:16px;
-  background:#fff;
-  outline:none;
-}
-input:focus,select:focus{
-  border-color:rgba(31,122,90,.55);
-  box-shadow:0 0 0 4px rgba(31,122,90,.12);
-}
-.resultCard{
-  border:1px solid rgba(31,122,90,.25);
-  background:linear-gradient(180deg,rgba(31,122,90,.06),rgba(31,122,90,.02));
-}
-.range{
-  display:flex;
-  gap:10px;
-  align-items:baseline;
-}
-.priceBig{
-  font-size:28px;
-  font-weight:850;
-  color:var(--accent2);
-  transition: transform 180ms ease, opacity 180ms ease;
-}
-.priceBig.bump{
-  transform: translateY(-1px) scale(1.02);
-  opacity:.98;
-}
-.msg{
-  margin-top:10px;
-  padding:10px 12px;
-  border-radius:14px;
-  border:1px solid var(--line);
-  font-size:13px;
-}
-.msg.warn{
-  background:rgba(180,35,24,.06);
-  border-color:rgba(180,35,24,.35);
-  color:var(--warn);
-}
-.btn{
-  border:0;
-  border-radius:14px;
-  padding:12px;
-  font-size:15px;
-  font-weight:750;
-  cursor:pointer;
-  width:100%;
-  margin-top:12px;
-}
-.btn.primary{
-  background:var(--accent);
-  color:#fff;
-}
-.noteStrong{
-  margin-top:10px;
-  padding:10px 12px;
-  border-radius:14px;
-  border:1px solid rgba(16,24,40,.12);
-  background:rgba(16,24,40,.03);
-  color:#344054;
-  font-size:13.5px;
-}
-.tiny{
-  font-size:12.2px;
-  color:var(--muted);
-  margin-top:10px;
-}
-.footer{
-  margin-top:14px;
-  padding: 0 2px;
-  font-size:11.8px;
-  color: var(--muted);
-  line-height:1.45;
-}
-.footer .pow{
-  margin-top:10px;
-  font-size:12px;
-  color:#475467;
-}
-</style>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-RYD16ZTQ6E"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-RYD16ZTQ6E', { anonymize_ip: true });
+  </script>
+
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>UnikArt – Okvirna procena cene</title>
+
+  <style>
+  :root{
+    --bg:#f6f7f9;
+    --card:#ffffff;
+    --text:#101828;
+    --muted:#667085;
+    --line:#e4e7ec;
+    --accent:#1f7a5a;
+    --accent2:#145741;
+    --warn:#b42318;
+    --shadow:0 10px 30px rgba(16,24,40,.08);
+    --radius:18px;
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0;
+    font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+    background:var(--bg);
+    color:var(--text);
+    line-height:1.35;
+  }
+  .wrap{
+    max-width:520px;
+    margin:0 auto;
+    padding:18px 14px 28px;
+  }
+  .brand{
+    margin:2px 0 2px;
+    font-size:14px;
+    font-weight:800;
+    letter-spacing:.2px;
+    color:var(--accent2);
+  }
+  .title{
+    font-size:20px;
+    font-weight:800;
+    margin:0 0 6px;
+  }
+  .subtitle{
+    margin:0 0 14px;
+    color:var(--muted);
+    font-size:14px;
+  }
+  .card{
+    background:var(--card);
+    border:1px solid var(--line);
+    border-radius:var(--radius);
+    box-shadow:var(--shadow);
+    padding:14px;
+    margin:12px 0;
+  }
+  .grid2{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:12px;
+  }
+  label{
+    display:block;
+    font-size:13px;
+    color:var(--muted);
+    margin-bottom:6px;
+  }
+  input,select{
+    width:100%;
+    border:1px solid var(--line);
+    border-radius:14px;
+    padding:12px;
+    font-size:16px;
+    background:#fff;
+    outline:none;
+  }
+  input:focus,select:focus{
+    border-color:rgba(31,122,90,.55);
+    box-shadow:0 0 0 4px rgba(31,122,90,.12);
+  }
+  .resultCard{
+    border:1px solid rgba(31,122,90,.25);
+    background:linear-gradient(180deg,rgba(31,122,90,.06),rgba(31,122,90,.02));
+  }
+  .range{
+    display:flex;
+    gap:10px;
+    align-items:baseline;
+  }
+  .priceBig{
+    font-size:28px;
+    font-weight:850;
+    color:var(--accent2);
+    transition: transform 180ms ease, opacity 180ms ease;
+  }
+  .priceBig.bump{
+    transform: translateY(-1px) scale(1.02);
+    opacity:.98;
+  }
+  .msg{
+    margin-top:10px;
+    padding:10px 12px;
+    border-radius:14px;
+    border:1px solid var(--line);
+    font-size:13px;
+  }
+  .msg.warn{
+    background:rgba(180,35,24,.06);
+    border-color:rgba(180,35,24,.35);
+    color:var(--warn);
+  }
+  .btn{
+    border:0;
+    border-radius:14px;
+    padding:12px;
+    font-size:15px;
+    font-weight:750;
+    cursor:pointer;
+    width:100%;
+    margin-top:12px;
+  }
+  .btn.primary{
+    background:var(--accent);
+    color:#fff;
+  }
+  .noteStrong{
+    margin-top:10px;
+    padding:10px 12px;
+    border-radius:14px;
+    border:1px solid rgba(16,24,40,.12);
+    background:rgba(16,24,40,.03);
+    color:#344054;
+    font-size:13.5px;
+  }
+  .tiny{
+    font-size:12.2px;
+    color:var(--muted);
+    margin-top:10px;
+  }
+  .footer{
+    margin-top:14px;
+    padding: 0 2px;
+    font-size:11.8px;
+    color: var(--muted);
+    line-height:1.45;
+  }
+  .footer .pow{
+    margin-top:10px;
+    font-size:12px;
+    color:#475467;
+  }
+  </style>
 </head>
+
 <body>
-<div class="wrap">
-  <div class="brand">UnikArt Radionica drvenih znakova</div>
-  <h1 class="title">Okvirna procena cene znaka</h1>
-  <p class="subtitle">Vaš partner u savršenom brendiranju. Unesite dimenzije i materijal — dobijate procenu ulaganja (od–do).</p>
+  <div class="wrap">
+    <div class="brand">UnikArt Radionica drvenih znakova</div>
+    <h1 class="title">Okvirna procena cene znaka</h1>
+    <p class="subtitle">Vaš partner u savršenom brendiranju. Unesite dimenzije i materijal — dobijate procenu ulaganja (od–do).</p>
 
-  <div class="card">
-    <div class="grid2">
-      <div>
-        <label>Širina (cm)</label>
-        <input id="w" inputmode="numeric" pattern="[0-9]*" placeholder="npr. 180">
+    <div class="card">
+      <div class="grid2">
+        <div>
+          <label>Širina (cm)</label>
+          <input id="w" inputmode="numeric" pattern="[0-9]*" placeholder="npr. 180">
+        </div>
+        <div>
+          <label>Visina (cm)</label>
+          <input id="h" inputmode="numeric" pattern="[0-9]*" placeholder="npr. 50">
+        </div>
       </div>
-      <div>
-        <label>Visina (cm)</label>
-        <input id="h" inputmode="numeric" pattern="[0-9]*" placeholder="npr. 50">
+
+      <div style="margin-top:12px;">
+        <label>Materijal</label>
+        <select id="mat">
+          <option value="JASEN" selected>JASEN – premium, dugovečan, karakteran</option>
+          <option value="BOR">BOR – topao, kraći vek, ekonomičan</option>
+        </select>
       </div>
+
+      <div id="msg" class="msg" style="display:none;"></div>
     </div>
 
-    <div style="margin-top:12px;">
-      <label>Materijal</label>
-      <select id="mat">
-        <option value="JASEN" selected>JASEN – premium, dugovečan, karakteran</option>
-        <option value="BOR">BOR – topao, kraći vek, ekonomičan</option>
-      </select>
+    <div class="card resultCard" id="resultCard" style="display:none;">
+      <div style="font-size:13px;color:var(--muted);">Procena ulaganja</div>
+      <div class="range">
+        <div class="priceBig" id="pMin"></div>
+        <div>-</div>
+        <div class="priceBig" id="pMax"></div>
+      </div>
+
+      <div class="noteStrong">
+        <b>U cenu je uključena standardna završna zaštita.</b><br>
+        Procena je informativna. Finalna cena zavisi od kompleksnosti dizajna.
+      </div>
+
+      <button class="btn primary" id="sendBtn">Pošalji upit na Messenger</button>
     </div>
 
-    <div id="msg" class="msg" style="display:none;"></div>
-  </div>
-
-  <div class="card resultCard" id="resultCard" style="display:none;">
-    <div style="font-size:13px;color:var(--muted);">Procena ulaganja</div>
-    <div class="range">
-      <div class="priceBig" id="pMin"></div>
-      <div>-</div>
-      <div class="priceBig" id="pMax"></div>
+    <div class="tiny">
+      Dimenzije su u cm. Minimalna površina: 0.15 m². Maksimalna: 2.00 m².
     </div>
 
-    <div class="noteStrong">
-      <b>U cenu je uključena standardna završna zaštita.</b><br>
-      Procena je informativna. Finalna cena zavisi od kompleksnosti dizajna.
+    <div class="footer">
+      Politika privatnosti (ukratko): Ovaj kalkulator ne prikuplja i ne čuva lične podatke. Unosi se obrađuju lokalno u vašem pregledaču. Slanjem upita na Messenger, vi samostalno birate šta šaljete u poruci.
+      <div class="pow">Powered by UnikArt radionica ©</div>
     </div>
-
-    <button class="btn primary" id="sendBtn">Pošalji upit na Messenger</button>
   </div>
 
-  <div class="tiny">
-    Dimenzije su u cm. Minimalna površina: 0.15 m². Maksimalna: 2.00 m².
-  </div>
+  <script>
+  (function(){
+    const HOURLY_EUR = 20;
+    const HOURS_PER_M2 = 5;
+    const MIN_AREA = 0.15;
+    const MAX_AREA = 2.00;
+    const CONSUMABLES_PER_M2 = 10;
 
-  <div class="footer">
-    Politika privatnosti (ukratko): Ovaj kalkulator ne prikuplja i ne čuva lične podatke. Unosi se obrađuju lokalno u vašem pregledaču. Slanjem upita na Messenger, vi samostalno birate šta šaljete u poruci.
-    <div class="pow">Powered by UnikArt radionica ©</div>
-  </div>
-</div>
+    const MAT_COST = { "JASEN": 30, "BOR": 12 };
+    const MARKUP = {
+      "BOR":   { min: 0.30, max: 0.50 },
+      "JASEN": { min: 0.40, max: 0.65 }
+    };
 
-<script>
-(function(){
-  const HOURLY_EUR = 20;
-  const HOURS_PER_M2 = 5;
-  const MIN_AREA = 0.15;
-  const MAX_AREA = 2.00;
-  const CONSUMABLES_PER_M2 = 10;
+    const wEl=document.getElementById("w");
+    const hEl=document.getElementById("h");
+    const matEl=document.getElementById("mat");
+    const msgEl=document.getElementById("msg");
+    const resultCard=document.getElementById("resultCard");
+    const pMinEl=document.getElementById("pMin");
+    const pMaxEl=document.getElementById("pMax");
 
-  const MAT_COST = { "JASEN": 30, "BOR": 12 };
-  const MARKUP = {
-    "BOR":   { min: 0.30, max: 0.50 },
-    "JASEN": { min: 0.40, max: 0.65 }
-  };
-
-  const wEl=document.getElementById("w");
-  const hEl=document.getElementById("h");
-  const matEl=document.getElementById("mat");
-  const msgEl=document.getElementById("msg");
-  const resultCard=document.getElementById("resultCard");
-  const pMinEl=document.getElementById("pMin");
-  const pMaxEl=document.getElementById("pMax");
-
-  function cleanNum(v){
-    v=(v||"").toString().replace(/[^\d]/g,"");
-    return v?parseInt(v,10):NaN;
-  }
-  function roundUp10(x){return Math.ceil(x/10)*10;}
-  function bump(el){
-    el.classList.remove("bump");
-    void el.offsetWidth;
-    el.classList.add("bump");
-    setTimeout(()=>el.classList.remove("bump"),200);
-  }
-
-  let lastMin=null,lastMax=null;
-
-  function calc(){
-    const w=cleanNum(wEl.value);
-    const h=cleanNum(hEl.value);
-
-    if(Number.isNaN(w)||Number.isNaN(h)){
-      resultCard.style.display="none";
-      return;
+    function cleanNum(v){
+      v=(v||"").toString().replace(/[^\d]/g,"");
+      return v?parseInt(v,10):NaN;
+    }
+    function roundUp10(x){return Math.ceil(x/10)*10;}
+    function bump(el){
+      el.classList.remove("bump");
+      void el.offsetWidth;
+      el.classList.add("bump");
+      setTimeout(()=>el.classList.remove("bump"),200);
     }
 
-    const area=(w/100)*(h/100);
+    let lastMin=null,lastMax=null;
 
-    if(area<MIN_AREA){
-      msgEl.style.display="block";
-      msgEl.className="msg warn";
-      msgEl.textContent="Minimalna preporučena površina je 0.15 m².";
-      resultCard.style.display="none";
-      return;
+    // Analytics helpers (safe + minimal)
+    function track(name, params){
+      try { if (typeof gtag === "function") gtag("event", name, params || {}); } catch(e) {}
     }
-    if(area>MAX_AREA){
-      msgEl.style.display="block";
-      msgEl.className="msg warn";
-      msgEl.textContent="Za veće dimenzije pošaljite direktan upit.";
-      resultCard.style.display="none";
-      return;
+    let calcUsedSent = false;
+
+    function calc(){
+      const w=cleanNum(wEl.value);
+      const h=cleanNum(hEl.value);
+
+      if(Number.isNaN(w)||Number.isNaN(h)){
+        resultCard.style.display="none";
+        return;
+      }
+
+      const area=(w/100)*(h/100);
+
+      if(area<MIN_AREA){
+        msgEl.style.display="block";
+        msgEl.className="msg warn";
+        msgEl.textContent="Minimalna preporučena površina je 0.15 m².";
+        resultCard.style.display="none";
+        return;
+      }
+      if(area>MAX_AREA){
+        msgEl.style.display="block";
+        msgEl.className="msg warn";
+        msgEl.textContent="Za veće dimenzije pošaljite direktan upit.";
+        resultCard.style.display="none";
+        return;
+      }
+
+      msgEl.style.display="none";
+
+      const key = matEl.value;
+      const matCostPerM2 = MAT_COST[key];
+      const mkMin = MARKUP[key].min;
+      const mkMax = MARKUP[key].max;
+
+      const labor=area*HOURS_PER_M2*HOURLY_EUR;
+      const materialCost=area*matCostPerM2;
+      const consumables=area*CONSUMABLES_PER_M2;
+      const base=labor+materialCost+consumables;
+
+      const min=roundUp10(base*(1+mkMin));
+      const max=roundUp10(base*(1+mkMax));
+
+      pMinEl.textContent=min+"€";
+      pMaxEl.textContent=max+"€";
+
+      if(min!==lastMin){bump(pMinEl);lastMin=min;}
+      if(max!==lastMax){bump(pMaxEl);lastMax=max;}
+
+      // Analytics: first time user got a valid price (used calculator)
+      if(!calcUsedSent){
+        calcUsedSent = true;
+        track("calc_used", { material: key });
+      }
+
+      resultCard.style.display="block";
     }
 
-    msgEl.style.display="none";
+    function sendMessenger(){
+      const w=cleanNum(wEl.value);
+      const h=cleanNum(hEl.value);
+      const materialName=matEl.options[matEl.selectedIndex].text;
 
-    const key = matEl.value;
-    const matCostPerM2 = MAT_COST[key];
-    const mkMin = MARKUP[key].min;
-    const mkMax = MARKUP[key].max;
+      const area=(w/100)*(h/100);
+      const key = matEl.value;
+      const matCostPerM2 = MAT_COST[key];
+      const mkMin = MARKUP[key].min;
+      const mkMax = MARKUP[key].max;
 
-    const labor=area*HOURS_PER_M2*HOURLY_EUR;
-    const materialCost=area*matCostPerM2;
-    const consumables=area*CONSUMABLES_PER_M2;
-    const base=labor+materialCost+consumables;
+      const labor=area*HOURS_PER_M2*HOURLY_EUR;
+      const materialCost=area*matCostPerM2;
+      const consumables=area*CONSUMABLES_PER_M2;
+      const base=labor+materialCost+consumables;
 
-    const min=roundUp10(base*(1+mkMin));
-    const max=roundUp10(base*(1+mkMax));
+      const min=roundUp10(base*(1+mkMin));
+      const max=roundUp10(base*(1+mkMax));
 
-    pMinEl.textContent=min+"€";
-    pMaxEl.textContent=max+"€";
+      const message=`Pozdrav, interesuje me znak.\n\nDimenzije: ${w}x${h} cm\nMaterijal: ${materialName}\nProcena: ${min}€ - ${max}€\n`;
+      const url="https://m.me/radionicaunikart?text="+encodeURIComponent(message);
 
-    if(min!==lastMin){bump(pMinEl);lastMin=min;}
-    if(max!==lastMax){bump(pMaxEl);lastMax=max;}
+      // Analytics: clicked to send inquiry (opened Messenger)
+      track("messenger_click", { material: key });
 
-    resultCard.style.display="block";
-  }
+      window.open(url,"_blank");
+    }
 
-  function sendMessenger(){
-    const w=cleanNum(wEl.value);
-    const h=cleanNum(hEl.value);
-    const materialName=matEl.options[matEl.selectedIndex].text;
+    wEl.addEventListener("input",calc);
+    hEl.addEventListener("input",calc);
 
-    const area=(w/100)*(h/100);
-    const key = matEl.value;
-    const matCostPerM2 = MAT_COST[key];
-    const mkMin = MARKUP[key].min;
-    const mkMax = MARKUP[key].max;
+    matEl.addEventListener("change", ()=>{
+      track("material_selected", { material: matEl.value });
+      calc();
+    });
 
-    const labor=area*HOURS_PER_M2*HOURLY_EUR;
-    const materialCost=area*matCostPerM2;
-    const consumables=area*CONSUMABLES_PER_M2;
-    const base=labor+materialCost+consumables;
+    document.getElementById("sendBtn").addEventListener("click",sendMessenger);
 
-    const min=roundUp10(base*(1+mkMin));
-    const max=roundUp10(base*(1+mkMax));
-
-    const message=`Pozdrav, interesuje me znak.\n\nDimenzije: ${w}x${h} cm\nMaterijal: ${materialName}\nProcena: ${min}€ - ${max}€\n`;
-    const url="https://m.me/radionicaunikart?text="+encodeURIComponent(message);
-    window.open(url,"_blank");
-  }
-
-  wEl.addEventListener("input",calc);
-  hEl.addEventListener("input",calc);
-  matEl.addEventListener("change",calc);
-  document.getElementById("sendBtn").addEventListener("click",sendMessenger);
-
-})();
-</script>
+  })();
+  </script>
 </body>
 </html>
